@@ -1,11 +1,27 @@
+.advantage{
+}
+
+
 .advantage-picture__img {
     display: block;
     width: 70px;
     height: 70px;
 }
 
+.advantage__list {
+    max-width: 480px;
+    @media screen and (min-width: 768px){
+        max-width: 768px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px){
+        max-width: 1200px;
+    }
+}
+
 .advantage-picture__zone {
-    width: 270px;
+    max-width: 100%;
     height: 120px;
     display: flex;
     background: #f5f4fa;
@@ -24,6 +40,7 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-align: center;
     text-transform: uppercase;
     color: var(--primary-text-color);
     margin-bottom: 10px;
@@ -37,12 +54,30 @@
     color: var(--secondary-text-color);
 }
 
-.advantage__list {
-    display: flex;
-    justify-content: space-between;
-}
+      
 
 .advantage__item {
-    width: 270px;
+    max-width: 100%;
+    margin-bottom: 30px;
+    @media screen and (min-width: 768px){
+        width: calc((100% - 2 * 15px) / 2);
+        &:nth-child(odd){
+            margin-right: 15px;
+        }
+        &:nth-child(even){
+            margin-left: 15px;
+        }
+    }
+    @media screen and (min-width: 1200px){
+        width: calc((100% - 6 * 15px) / 4);
+        margin-right: 15px;
+        margin-left: 15px;
+        &:last-child{
+            margin-right: 0px;
+        }
+        &:first-child{
+            margin-left: 0px;
+        }
+    }
     display: block;
 }

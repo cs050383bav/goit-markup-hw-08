@@ -9,15 +9,20 @@
 
 .klient__list {
     display: flex;
-    max-width: 1200;
+    max-width: 480;
+    flex-wrap: wrap;
 }
 
 .klient__item {
-    flex-basis: 170px;
-    &:not(:last-child) {
-        margin-right: 30px;
+    flex-basis: calc((100% - 2 * 15px) / 2);
+    &:nth-child(odd){
+        margin-right: 15px;
+    }
+    &:nth-child(even){
+        margin-left: 15px;
     }
 }
+
 
 .klient__link {
     display: block;

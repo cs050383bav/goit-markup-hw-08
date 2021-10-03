@@ -1,5 +1,8 @@
 .do {
     padding-top: 0;
+    @media screen and (max-width: 1200px){
+        display: none;
+    }
 }
 
 .do__title {

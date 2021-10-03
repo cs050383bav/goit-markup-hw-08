@@ -3,15 +3,34 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding: 200px 0px;
+    padding: 118px 0px;
     background-image: linear-gradient(
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)
         ),
-        url(../images/hero/hero-1.jpg);
+        url(../../images/hero/hero-mob-1x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media screen and (min-width: 480px){
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ),
+        url(../../images/hero/hero-tab-1x.jpg);
+
+    }
+
+    @media screen and (min-width: 1200px){
+        padding: 200px 0px;
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ),
+        url(../../images/hero/hero-dt-1x-min.jpg);
+
+    }
 }
 
 .hero-wall {
@@ -20,10 +39,18 @@
 
 .hero__title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.615;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #ffffff;
     margin-bottom: 45px;
+    text-align: center;
+    @media screen and (min-width: 1200px){
+        font-size: 44px;
+        
+        
+    }
 }
+
+
